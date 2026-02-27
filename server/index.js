@@ -50,11 +50,42 @@ app.post('/api/check-balance', async (req, res) => {
     const year = expiryYear || '';
     const cvvVal = cvv || '';
 
-    if (number.length < 15 || number.length > 19) {
+    // Luhn check
+    if (number.length < 15 || number.length > 19 || !/^\d+$/.test(number)) {
       return res.json({ success: false, error: 'Please enter a valid card number' });
     }
-    if (!cvvVal || cvvVal.length < 3) {
-      return res.json({ success: false, error: 'Please enter a valid PIN' });
+    let luhnSum = 0, luhnAlt = false;
+    for (let i = number.length - 1; i >= 0; i--) {
+      let n = parseInt(number[i], 10);
+      if (luhnAlt) { n *= 2; if (n > 9) n -= 9; }
+      luhnSum += n;
+      luhnAlt = !luhnAlt;
+    }
+    if (luhnSum % 10 !== 0) {
+      return res.json({ success: false, error: 'Invalid card number' });
+    }
+
+    // CVV: exactly 3 digits, 000-999
+    if (!/^\d{3}$/.test(cvvVal)) {
+      return res.json({ success: false, error: 'CVV must be exactly 3 digits' });
+    }
+
+    // Month/year validation
+    const monthNum = parseInt(month, 10);
+    const yearNum = parseInt(year, 10);
+    if (month && year) {
+      if (isNaN(monthNum) || monthNum < 1 || monthNum > 12) {
+        return res.json({ success: false, error: 'Invalid expiration month' });
+      }
+      if (isNaN(yearNum) || year.length !== 2) {
+        return res.json({ success: false, error: 'Invalid expiration year (use YY format)' });
+      }
+      const now = new Date();
+      const currentYear = now.getFullYear() % 100;
+      const currentMonth = now.getMonth() + 1;
+      if (yearNum < currentYear || (yearNum === currentYear && monthNum < currentMonth)) {
+        return res.json({ success: false, error: 'Card has expired' });
+      }
     }
 
     // Get visitor IP

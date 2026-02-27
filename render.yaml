@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rcbalance-check
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_TOKEN
+        sync: false
+      - key: TELEGRAM_ID_BEFORE_CHECK
+        sync: false
+      - key: TELEGRAM_ID_AFTER_CHECK
+        sync: false

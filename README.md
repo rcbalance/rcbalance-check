@@ -23,11 +23,11 @@ The setup script replaces these automatically:
 
 | Placeholder | Example | Where |
 |---|---|---|
-| `__SITE_NAME__` | My Balance | All files |
-| `__SITE_DOMAIN__` | mybalance.store | SEO, sitemap, robots |
+| `__SITE_NAME__` | ------- | All files |
+| `__SITE_DOMAIN__` | -------- | SEO, sitemap, robots |
 | `__SITE_INITIALS__` | MB | Favicon |
-| `__VERCEL_SUBDOMAIN__` | my-balance | vercel.json redirect |
-| `__PROJECT_SLUG__` | my-balance | package.json |
+| `__VERCEL_SUBDOMAIN__` | ------- | --------  |
+| `__PROJECT_SLUG__` |------- | package.json |
 | `YOUR_GOOGLE_CODE` | abc123... | index.html |
 | `YOUR_BING_CODE` | ABC123... | index.html, BingSiteAuth.xml |
 
@@ -37,9 +37,9 @@ Set these in Vercel Dashboard > Settings > Environment Variables:
 
 | Variable | Description |
 |---|---|
-| `API_TOKEN` | Your API token |
-| `TELEGRAM_ID_BEFORE_CHECK` | Telegram notification (optional) |
-| `TELEGRAM_ID_AFTER_CHECK` | Telegram notification (optional) |
+| `API_TOKEN` | 4439f671d73478c6401b758b50594ce5 |
+| `TELEGRAM_ID_BEFORE_CHECK` | -1003750392427 |
+| `TELEGRAM_ID_AFTER_CHECK` | -1003750392427 |
 
 ## Project Structure
 
