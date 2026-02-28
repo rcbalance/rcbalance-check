@@ -770,11 +770,13 @@
       });
       const pageEl = document.getElementById('page-' + p);
       if (pageEl) pageEl.classList.add('active');
-      // Update title & meta description for SEO
+      // Update title, meta description & canonical URL for SEO
       const seo = PAGE_SEO[p] || PAGE_SEO.home;
       document.title = seo.title;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute('content', seo.desc);
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute('href', 'https://rcbalance-check.com' + (p === 'home' ? '/' : '/' + p));
     }
     showPageFromPath();
     window.addEventListener('popstate', showPageFromPath);
